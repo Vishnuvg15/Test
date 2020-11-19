@@ -1,8 +1,8 @@
 ---
 - hosts: "{{ server }}"
   tasks:
-  - name: Run script
-    win_command: C:\Script\DBBackup.bat
+  - name: Run script to copy files to S3
+    win_command: B:\DBBackup.bat
     register: find_output
   - debug:
       var: find_output
