@@ -3,4 +3,7 @@
   tasks:
   - name: Run cscript
     win_command: cscript C:\Script\Delete-IIS2-Log-Files.vbs
+    register: find_output
+  - debug:
+      var: find_output
       
