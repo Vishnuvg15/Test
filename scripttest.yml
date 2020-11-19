@@ -1,8 +1,8 @@
 ---
 - hosts: "{{ server }}"
   tasks:
-  - name: Run cscript
-    win_command: cscript C:\Script\Delete-IIS2-Log-Files.vbs
+  - name: Run script
+    win_command: C:\Script\DBBackup.bat
     register: find_output
   - debug:
       var: find_output
